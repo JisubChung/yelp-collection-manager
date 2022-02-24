@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"someday i'll install tests\"",
     "prepare": "husky install"
   },
   "author": "",
@@ -12,28 +12,31 @@
   "dependencies": {
     "bluebird": "3.7.2",
     "chalk": "4.1.0",
-    "commander": "^9.0.0",
+    "commander": "9.0.0",
     "dotenv": "16.0.0",
-    "fs-extra": "^10.0.1",
+    "fs-extra": "10.0.1",
     "geolib": "3.3.3",
     "lodash": "4.17.20",
     "node-fetch": "2.6.1",
-    "node-html-parser": "^5.2.0",
+    "node-html-parser": "5.2.0",
     "shelljs": "0.8.4",
     "terminal-kit": "1.47.0",
     "yelp-fusion": "3.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.9.0",
+    "eslint": "8.9.0",
     "eslint-config-prettier": "8.4.0",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "husky": "7.0.4",
+    "eslint-plugin-react": "7.28.0",
     "lint-staged": "12.3.4",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "husky": "7.0.0"
   },
   "type": "module",
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "*.{js,json}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
