@@ -1,0 +1,8 @@
+.husky/
+node_modules/
+areas/
+detailedListing/
+simpleListings/
+*.iml
+.env
+areas.json
